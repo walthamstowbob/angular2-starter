@@ -1,0 +1,33 @@
+<nav class="navbar-static-top navbar-default" id="home">
+    <div class="container-fluid">
+        <div class="navbar-brand">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">Menu</button>
+            <div class="collapse navbar-collapse navHeaderCollapse">
+
+                <ul class="nav nav-pills">
+                    <li [class.active]="viewMode == 'home'"><a (click)="viewMode = 'home'">Home</a></li>
+                    <li [class.active]="viewMode == 'about'"><a (click)="viewMode = 'about'">About</a></li>
+                    <li [class.active]="viewMode == 'portfolio'"><a (click)="viewMode = 'portfolio'">Portfolio</a>
+                    </li>
+                    <li [class.active]="viewMode == 'contact'"><a href="mailto:barry@lekkerit.com" (click)="viewMode = 'contact'">Contact</a></li>
+                    <li [class.active]="viewMode == 'desk'"><a href="http://www.lekkerit.com/desk" (click)="viewMode = 'desk'">Desk</a></li>
+                </ul>
+
+                <div [ngSwitch]="viewMode">
+                    <template [ngSwitchWhen]="'home'" ngSwitchDefault>
+                        <jumbo></jumbo>
+                    </template>
+                    <template [ngSwitchWhen]="'about'">
+                        <about></about>
+                    </template>
+                    <template [ngSwitchWhen]="'portfolio'">
+                        <zippy-smiton heading="Freelance Developer"></zippy-smiton>
+                        <zippy-scrum heading="Scrum Master"></zippy-scrum>
+                        <zippy-boot heading="Bootstrap"></zippy-boot>
+                        <zippy-app heading="Applications"></zippy-app>
+                    </template>
+                </div>
+
+            </div>
+        </div>
+    </div>

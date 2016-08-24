@@ -1,19 +1,9 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 
 @Component({
-    selector: 'lekker-jumbotron',
-    template: `
-            
-    <div class="jumbotron">
-        <div class="container">
-            <h1 class="jumbo-intro">Lekker IT</h1>
-            <p class="lead">Watch this space for more yummy sites, native apps and super-cool coding.</p>
-          <p class="lead">
-            <a class="btn btn-primary btn-lg" a href="mailto:barry@lekkerit.com" role="button">barry@lekkerit.com</a></p>
-        </div>
-        </div>
-        
-        `,        
+    selector: 'jumbo',
+    templateUrl: 'src/app/components/ii-jumbo/jumbo.component.html',
+    styleUrls:['src/app/components/ii-jumbo/navbar.component.css'],            
 })
 
-export class LekkerJumbotronComponent  {}   
+export class JumboComponent  {}   

@@ -1,0 +1,120 @@
+body {padding-top: 0px;}
+
+.navbar-brand {height: 80px;}
+
+.logo {
+            
+    position:static;
+    width: 10%;
+    margin-left: 125px;
+    margin-top: -10px;
+    padding: 3px 0px 3px 0px;
+}
+
+.jumbotron {
+    
+    border-radius: 10px;
+    max-height: 600px;
+    max-width: 100%;
+    margin-top: 20px;
+}       
+
+.container-fluid {
+    margin: auto 0;
+    background-image:url("./photography.png");
+    background-attachment: fixed;
+    min-height: 650px;
+    min-width: 800px;
+    
+    }
+
+.about-me {
+    font-family: Helvetica,Arial,sans-serif;
+    background:#EEEEEE;
+    max-height: 600px;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align:left;
+}
+
+.text-left {padding: 10px;}
+
+.lead {padding: 10px;}
+
+.img-responsive-1 {
+    
+    max-width: 50%;
+    max-height: 50%;
+    position: relative;
+    margin-top: 35px;
+    margin-left: 100px;
+}
+
+.jumbo-intro {
+    
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.zippy-portfolio {
+
+    margin-top: 100px;
+    padding: 5px;
+    background-color: #333;
+    max-height: 100%;
+    max-width: 100%;
+    background-color: #333;
+}
+
+.zippy-page {
+
+    margin-top: 100px;
+    max-height: 100%;
+    max-width: 100%;
+   
+}
+
+.zippy {
+            border: 1px dotted #808080;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            background-color: #EEEEEE; 
+            color: #808080;
+            font-family: Futura, Trebuchet, Arial, sans-serif;
+        }
+
+.media-object {margin-bottom: 20px; max-width:600px; max-height:250px;}
+     
+.zippy .zippy-heading {
+            
+            padding: 20px;
+            font-weight: bold;
+            font-family: Futura, Trebuchet, Arial, sans-serif;
+            font-size: 1.1em;
+        }
+        
+.zippy .zippy-heading:hover{
+            cursor: pointer;
+        }
+        
+.zippy .zippy-content {
+            padding: 10px;
+        }
+
+.padding{
+    
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.lekker-footer {
+   
+    position: relative;
+    min-height:100px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 10px;
+}
