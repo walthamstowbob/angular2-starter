@@ -2,8 +2,8 @@ import {Component} from '@angular/core';
 
 @Component({
     selector: 'navbar',
-    templateUrl: 'src/app/components/i-navbar/navbar.component.ts',
-    styleUrls:['src/app/components/i-navbar/navbar.component.css'],
+    templateUrl: 'src/app/components/i-navbar/navbar.component.html',
+    // styleUrls:['src/app/components/i-navbar/navbar.component.css'],
            
 })
 

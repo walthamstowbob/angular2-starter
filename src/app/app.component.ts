@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import {Observable} from 'rxjs/Rx';
 
 import {NavbarComponent} from './components/i-navbar/navbar.component';
 import {JumboComponent} from './components/ii-jumbo/jumbo.component';
@@ -14,47 +15,12 @@ import {FooterComponent} from './components/vi-footer/footer.component';
 @Component({
     selector: 'my-app',
     template: `
-    <div class="navbar-static-top navbar-default" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-brand">
-            <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">Menu</button>
-            <a class="navbar-brand" href="#"><img src="./logo.jpg"></a> 
+                <jumbo></jumbo>
 
-    <ul class="nav nav-pills navbar-left">
-        <li [class.active]="viewMode == 'home'"><a href="#" (click)="viewMode = 'home'">Home</a></li>
-        <li [class.active]="viewMode == 'about'"><a href="#" (click)="viewMode = 'about'">About</a></li>
-        <li [class.active]="viewMode == 'portfolio'"><a href="#" (click)="viewMode = 'portfolio'">Portfolio</a>
-            </li>
-        <li [class.active]="viewMode == 'contact'"><a href="#" (click)="viewMode = 'contact'">Contact</a></li>
-        <li [class.active]="viewMode == 'desk'"><a href="http://www.lekkerit.com/desk" target= "_blank" (click)="viewMode = 'desk'">Desk</a></li>
-    </ul>
-
-    <div class="zippy-page" [ngSwitch]="viewMode">
-        <template [ngSwitchWhen]="'home'" ngSwitchDefault><lekker-jumbotron></lekker-jumbotron></template>
-        <template [ngSwitchWhen]="'about'"><lekker-about-me></lekker-about-me></template>
-        <template [ngSwitchWhen]="'portfolio'">
-            <zippy-smiton heading="Freelance Developer"></zippy-smiton>
-            <zippy heading="Scrum Master"></zippy>                
-            <zippy-bootstrap heading="Bootstrap"></zippy-bootstrap>
-            <zippy-weather heading="Applications"></zippy-weather>
-        </template>
-        <template [ngSwitchWhen]="'contact'"><contact-form></contact-form></template>
-    </div>
-    </div>
-    </div>
-    </div>
-
-    <lekker-footer></lekker-footer>
-
-    <div class="container" class="container-img">
-          
-    </div>
-
+                
                 `,
 
-    // directives: [NavbarComponent, 
-    //             JumboComponent, 
-    //             AboutComponent,
+    directives: [JumboComponent],
     //             ZippyAppComponent,
     //             ZippyBootComponent,
     //             ZippyFolioComponent,
@@ -66,7 +32,7 @@ import {FooterComponent} from './components/vi-footer/footer.component';
 
 export class AppComponent {
 
-    viewMode = ['home', 'about', 'portfolio', 'contact', 'desk'];
+    viewMode = ['apps', 'bootstrap', 'scrum', 'desk', 'contact'];
 
     onUpChange($event){
         console.log($event);
@@ -76,6 +42,14 @@ export class AppComponent {
 
     onClick(){
         this.isUp = !this.isUp;
+    }
+
+    isExpanded = true;
+
+   @Input() heading: string;
+
+    toggle(){
+        this.isExpanded = !this.isExpanded;
     }
 
 }

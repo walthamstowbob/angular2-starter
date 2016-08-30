@@ -1,4 +1,20 @@
-<nav class="navbar-static-top navbar-default" id="home">
+<div class="container">
+<ul class="nav nav-pills">
+            <li [class.active]="viewMode == 'map'">
+            <a (click)="viewMode = 'map'">Map View</a>
+            </li>
+            <li [class.active]="viewMode == 'list'"><a (click)="viewMode = 'list'">List View</a></li>
+        </ul>
+
+        <div [ngSwitch]="viewMode">
+            <template [ngSwitchWhen]="'map'" ngSwitchDefault>
+            <div class ="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.2854559160382!2d5.170772106274482!3d52.28611274115522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x30368c8b0122d0f8!2sSimsation+Nederland!5e0!3m2!1sen!2sus!4v1467201296315" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+            </template>
+            <template [ngSwitchWhen]="'list'">List View Content</template>
+        </div>
+</div>
+
+<!--<nav class="navbar-static-top navbar-default" id="home">
     <div class="container-fluid">
         <div class="navbar-brand">
             <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">Menu</button>
@@ -30,4 +46,4 @@
 
             </div>
         </div>
-    </div>
+    </div>-->

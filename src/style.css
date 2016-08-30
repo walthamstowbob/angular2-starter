@@ -13,30 +13,26 @@ body {padding-top: 0px;}
 
 .jumbotron {
     
-    border-radius: 10px;
-    max-height: 600px;
-    max-width: 100%;
-    margin-top: 20px;
-}       
-
-.container-fluid {
     margin: auto 0;
-    background-image:url("./photography.png");
-    background-attachment: fixed;
-    min-height: 650px;
-    min-width: 800px;
-    
-    }
-
-.about-me {
-    font-family: Helvetica,Arial,sans-serif;
-    background:#EEEEEE;
-    max-height: 600px;
-    max-width: 100%;
     border-radius: 10px;
+    height: 800px;
+    max-width: 100%;
     margin-top: 20px;
-    text-align:left;
+}     
+
+.jumbo-intro {
+    margin-right: 20px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding: 10px;
 }
+
+/*.nav-pills {margin: auto 0;}*/
+
+.col-md-3 {
+    margin: auto 0;
+    margin-top: 10px;
+    padding: 10px;}
 
 .text-left {padding: 10px;}
 
@@ -44,25 +40,18 @@ body {padding-top: 0px;}
 
 .img-responsive-1 {
     
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 10%;
+    max-height: 10%;
     position: relative;
     margin-top: 35px;
     margin-left: 100px;
 }
 
-.jumbo-intro {
-    
-    margin-top: 25px;
-    margin-bottom: 10px;
-    padding: 10px;
-}
-
-.zippy-portfolio {
+.zippy-folio {
 
     margin-top: 100px;
     padding: 5px;
-    background-color: #333;
+    background-color:#EEEEEE;
     max-height: 100%;
     max-width: 100%;
     background-color: #333;
@@ -77,7 +66,7 @@ body {padding-top: 0px;}
 }
 
 .zippy {
-            border: 1px dotted #808080;
+            border: 1px dotted #EEEEEE;
             border-radius: 10px;
             margin-bottom: 20px;
             background-color: #EEEEEE; 
@@ -111,6 +100,7 @@ body {padding-top: 0px;}
 
 .lekker-footer {
    
+    margin: auto 0;
     position: relative;
     min-height:100px;
     margin-top: 25px;

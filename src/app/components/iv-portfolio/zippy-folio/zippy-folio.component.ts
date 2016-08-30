@@ -2,7 +2,7 @@ import {Component, Input} from '@angular/core';
 
 @Component({
     selector: 'zippy-folio',
-    templateUrl:'src/app/components/iv-portfolio/zippy-folio.component.ts',
+    // templateUrl:'src/app/components/iv-portfolio/zippy-folio.component.ts',
     styleUrls:['src/app/components/iv-portfolio/zippy-folio.component.css'],  
 })
 

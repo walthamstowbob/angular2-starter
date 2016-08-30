@@ -1,8 +1,206 @@
- <div class="jumbotron">
+<div class="jumbotron">
+
         <div class="container">
+
+            <div class="lekker-footer">
+
+                <div class="col-lg-12">
+                    <ul class="list-inline banner-social-buttons">
+                        <!--<li id="inline"><a href="https://jsfiddle.net/user/walthamstowbob" target="_blank" class="btn btn-default btn-lg"><span class="fa fa-jsfiddle" aria-hidden="true"></span></a></li>-->
+                        <li id="inline">
+                            <a href="mailto:barry@lekkerit.com" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
+                        <li id="inline">
+                            <a href="https://github.com/walthamstowbob" target="_blank" class="btn btn-default btn-lg"><span class="fa fa-github" aria-hidden="true"></span></a>
+                        </li>
+                        <li id="inline">
+                            <a href="https://nl.linkedin.com/in/lekkerbob" target="_blank" class="btn btn-default btn-lg"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+                        </li>
+                        <li id="inline"><a href="https://twitter.com/lekkerit_" target="_blank" class="btn btn-default btn-lg"><span class="fa fa-twitter" aria-hidden="true"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+<div [ngSwitch]="viewMode">
+    <template [ngSwitchWhen]="'apps'" ngSwitchDefault>
+        <div class="apps">
             <h1 class="jumbo-intro">Lekker IT</h1>
+
             <p class="lead">Watch this space for more yummy sites, native apps and super-cool coding.</p>
-          <p class="lead">
-            <a class="btn btn-primary btn-lg" a href="mailto:barry@lekkerit.com" role="button">barry@lekkerit.com</a></p>
+        </div>
+
+        <!--<ul class="list-inline banner-social-buttons">
+            <li id="inline">
+                <a href="mailto:barry@lekkerit.com" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></a></li>
+ 
+            <li [class.active]="viewMode == 'apps'"><a (click)="viewMode = 'apps'" class="btn btn-default btn-lg"><span a href="mailto:barry@lekkerit.com" class="glyphicon glyphicon-certificate" aria-hidden="true"></span></a></li>
+            <li [class.active]="viewMode == 'bootstrap'"><a (click)="viewMode = 'bootstrap'">Webpages</a></li>
+            <li [class.active]="viewMode == 'scrum'"><a (click)="viewMode = 'scrum'">Scrum Master</a></li>
+            <li [class.active]="viewMode == 'desk'"><a (click)="viewMode = 'desk'">Desks</a></li>
+            <li [class.active]="viewMode == 'contact'"><a (click)="viewMode = 'contact'">Contact</a></li>
+
+        </ul>-->
+   
+   <div class="col-md-3">
+    <ul class="list-inline banner-social-buttons">
+        <li id="inline">
+            <a href="mailto:barry@lekkerit.com" class="btn btn-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></a></li>
+    </ul>
+    <div class="zippy">
+        <div class="zippy-heading" (click)="toggle()">
+            {{ heading }}
+            <i class="pull-right glyphicon" [ngClass]="
+                {
+                    'glyphicon-chevron-down': !isExpanded,
+                    'glyphicon-chevron-up': !isExpanded
+                }">
+        </i>
+        </div>
+        <div *ngIf="isExpanded" class="zippy-content">
+
+            <div class="media">
+                <div class="media-middle">
+
+                    <iframe class="media-object" src="http://www.lekkerit.com/content/6.php/weather.php" width="600" height="325" frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>
+
+    <div class="col-md-3">
+        <ul class="list-inline banner-social-buttons">
+        <li id="inline">
+            <a href="mailto:barry@lekkerit.com" class="btn btn-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></a></li>
+    </ul>
+    <div class="zippy">
+        <div
+            class="zippy-heading"
+            (click)="toggle()">    
+            {{ heading }}
+        <i 
+            class="pull-right glyphicon"
+            [ngClass]="
+                {
+                    'glyphicon-chevron-down': !isExpanded,
+                    'glyphicon-chevron-up': !isExpanded
+                }">
+        </i>
+        </div>
+        <div *ngIf="isExpanded" class="zippy-content">
+
+        <div class="media">
+        <div class="media-middle">
+            <iframe 
+                class="media-object" src="http://www.lekkerit.com" width="600" height="325" frameborder="0" allowfullscreen>
+            </iframe>
         </div>
         </div>
+        <ng-content></ng-content>
+        </div>
+    </div>
+    </div>
+
+    <div class="col-md-3">
+        <ul class="list-inline banner-social-buttons">
+        <li id="inline">
+            <a href="http://nrmm.london" class="btn btn-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></a></li>
+    </ul>
+    <div class="zippy">
+        <div
+            class="zippy-heading"
+            (click)="toggle()">    
+            {{ heading }}
+        <i 
+            class="pull-right glyphicon"
+            [ngClass]="
+                {
+                    'glyphicon-chevron-down': !isExpanded,
+                    'glyphicon-chevron-up': !isExpanded
+                }">
+        </i>
+        </div>
+        <div *ngIf="isExpanded" class="zippy-content">
+
+        <div class="media">
+        <div class="media-middle">
+            <iframe 
+                class="media-object" width="600" height="325" src="https://www.youtube.com/embed/CRWaXYWFY_k" frameborder="0" allowfullscreen>
+            </iframe>
+        </div>
+        </div>
+        <ng-content></ng-content>
+        </div>
+        </div>
+        </div>  
+
+        <div class="col-md-3">
+            <ul class="list-inline banner-social-buttons">
+        <li id="inline">
+            <a href="http://www.lewisluke.com/" class="btn btn-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></a></li>
+    </ul>
+            <div class="zippy">
+            <div
+                class="zippy-heading"
+                (click)="toggle()">    
+                {{ heading }}
+            <i 
+                class="pull-right glyphicon"
+                [ngClass]="
+                    {
+                        'glyphicon-chevron-down': !isExpanded,
+                        'glyphicon-chevron-up': !isExpanded
+                    }">
+            </i>
+            </div>
+                <div *ngIf="isExpanded" class="zippy-content">
+
+                <div class="media">
+                <div class="media-middle">
+                    <iframe 
+                        class="media-object" src="http://www.lewisluke.com" width="600" height="325" frameborder="0" allowfullscreen>
+                    </iframe>
+                </div>
+                </div>
+                <ng-content></ng-content>
+            </div>
+            </div>
+        </div>
+
+        <hr>
+ 
+  <!--<div class="col-md-3">
+    <ul class="list-inline banner-social-buttons">
+        <li id="inline">
+            <a href="mailto:barry@lekkerit.com" id="smiton" class="btn btn-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></a></li>
+    </ul>
+    <div class="zippy">
+        <div class="zippy-heading" (click)="toggle()">
+            {{ heading }}
+            <i class="pull-right glyphicon" [ngClass]="
+                {
+                    'glyphicon-chevron-down': !isExpanded,
+                    'glyphicon-chevron-up': !isExpanded
+                }">
+        </i>
+        </div>
+        <div *ngIf="isExpanded" class="zippy-content">
+
+            <div class="media">
+                <div class="media-middle">
+
+                    <iframe class="media-object" src="http://www.lekkerit.com/desk" width="600" height="325" frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>-->
+ </template>
+</div>
+</div>
+</div>

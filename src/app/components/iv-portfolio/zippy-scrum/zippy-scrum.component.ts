@@ -3,7 +3,7 @@ import {Component, Input} from '@angular/core';
 @Component({
     selector: 'zippy',
     templateUrl:'src/app/components/iv-portfolio/zippy-scrum.component.ts',
-    styleUrls:['src/app/components/iv-portfolio/zippy-scrum.component.css'],    
+    // styleUrls:['src/app/components/iv-portfolio/zippy-scrum.component.css'],    
 })
 
 export class ZippyScrumComponent  { 
